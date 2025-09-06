@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>William Calmo — Data Science</title>
+  <meta name="description" content="Portfolio of William Calmo — Data Science student at UC Berkeley. Includes projects, experience, and contact info." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <a class="logo" href="#">WC</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+<!-- <section class="parallax-hero">
+  <h1>Welcome to My Site</h1>
+</section> -->
+
+  <main class="container">
+    <!-- Hero -->
+    <section id="hero">
+      <h1>Hello, I’m William Calmo.</h1>
+      <p class="lead">
+        UC Berkeley Data Science (’25) with an economics emphasis. I build clean, well-explained data projects
+        and love turning messy data into decisions.
+      </p>
+      <p><a class="btn" href="#projects">See my work</a></p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="card">
+        <h3>EV Model Recommendation System</h3>
+        <p>
+          Predicted the best EV model for users based on behavior, vehicle traits, and charging habits.
+          Cleaned & engineered features (e.g., avg distance/cycle, efficiency) and used K-Means, PCA, and t-SNE for segmentation.
+        </p>
+        <p><em>Python · pandas · scikit-learn</em></p>
+        <p><a href="#">GitHub</a> · <a href="#">Writeup</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Email Spam Classifier</h3>
+        <p>
+          Built a binary classifier (spam vs ham) with logistic regression. Text preprocessing + feature engineering; evaluated with
+          ROC/AUC and accuracy.
+        </p>
+        <p><em>Python · scikit-learn</em></p>
+        <p><a href="#">GitHub</a></p>
+      </article>
+
+      <article class="card">
+        <h3>UC Berkeley Sensor Data Cleaning</h3>
+        <p>
+          Worked across a multi-table building-sensor schema using advanced SQL (JOINs, CTEs, JSON_AGG, time functions).
+          Resolved messy metadata, built views to find gaps, interpolate missing values, and roll up sensor classes.
+        </p>
+        <p><em>SQL · data modeling</em></p>
+        <p><a href="#">Notes</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Titanic Survival Prediction</h3>
+        <p>
+          Supervised models (logistic regression, decision trees) with EDA, feature selection, and cross-validation.
+        </p>
+        <p><em>Python · scikit-learn</em></p>
+        <p><a href="#">GitHub</a></p>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <strong>Home Depot — Hardware Sales / Head Cashier</strong> (Dec 2021–Present, Emeryville)
+          — Tool expertise for DIYers & trades; scheduling/breaks management; store-wide hardware inventory; cash handling and daily reports.
+        </li>
+        <li>
+          <strong>Finance Intern — Central Americans for Empowerment (CAFE)</strong> (Aug 2023–May 2024)
+          — Led fundraising and budget planning; coordinated logistics for cultural nights, speaker panels, and wellness workshops.
+        </li>
+        <li>
+          <strong>BuildOn — Volunteer/Program Coordinator</strong> (2018–2020)
+          — 350+ community service hours; organized a Guatemala school-build; partnered with Salesforce engineers on homelessness support.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        <strong>University of California, Berkeley</strong> — B.A. Data Science, Economics emphasis (May 2025)
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python, SQL, R, Java</li>
+        <li><strong>Libraries:</strong> pandas, NumPy, scikit-learn, regex</li>
+        <li><strong>Visualization:</strong> Matplotlib, Seaborn, Plotly</li>
+        <li><strong>Modeling:</strong> supervised learning, neural nets (intro), clustering</li>
+        <li><strong>Languages (human):</strong> English (native), Spanish (fluent), Mam (conversational)</li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I’m a data generalist who likes practical impact: clear SQL, tidy notebooks, and explainable models. I grew up in Oakland
+        and stay active in community work—especially projects that help underserved groups access resources. On the side, I play
+        soccer and write short notes about data problems I solve.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:william.calmo@gmail.com">william.calmo@gmail.com</a> · 
+        <a href="https://www.linkedin.com/in/william-calmo-a32172174">LinkedIn</a> · 
+        <a href="https://github.com/calmo4">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="container"><small>© <span id="year"></span> William Calmo</small></footer>
+  <script src="./script.js"></script>
+</body>
+</html>
