@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premier League Forecasting</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header class="container">
+    <nav>
+      <a href="../index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+        <a href="https://github.com/calmo4/prem_ml_2526" target="_blank" rel="noopener">GitHub Repo</a>
+    </section>
+
+    <section>
+      <h1>Premier League Forecasting Project</h1>
+      <p>
+        Built a mid-season forecasting system to predict final Premier League
+        points using historical match data.
+      </p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <ul>
+        <li><strong>Baseline Linear Model:</strong> MAE 4.42 · R² 0.891</li>
+        <li><strong>Rolling Form Model:</strong> MAE 1.24 · R² 0.991</li>
+        <li>Prediction error drops as matchweeks increase (MW5 → MW30)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Model Comparison Across Matchweeks</h2>
+      <p>
+        Prediction error (MAE) decreases as the season progresses.
+        Early-season forecasts are unstable, but by Matchweek 25–30
+        models become significantly more accurate.
+      </p>
+
+      <img
+        src="../assets/prem_model_comparison.png"
+        alt="Linear vs Random Forest prediction error across matchweeks"
+        style="width:100%; max-width:900px; border-radius:12px; margin-top:16px;"
+      />
+    </section>
+
+    <section>
+        <h2>Data Leakage (and how I prevented it)</h2>
+        <p>
+            Data leakage happens when a model accidentally uses information from the future while training,
+            which makes performance look unrealistically good.
+        </p>
+
+        <ul>
+            <li>
+                <strong>Example:</strong> If a “last 5 matches” feature includes the current match, the model is indirectly
+                seeing the outcome it’s supposed to predict.
+            </li>
+            <li>
+                <strong>Fix:</strong> I used a shifted rolling window (<code>shift()</code> before <code>rolling()</code>)
+                so the rolling features only use matches that happened <em>before</em> the match being predicted.
+            </li>
+            <li>
+                <strong>Evaluation:</strong> I trained on earlier seasons and tested on a later season to avoid “future season”
+                information leaking into training.
+            </li>
+        </ul>
+        </section>
+
+
+    <section>
+      <h2>What I Did</h2>
+      <ul>
+        <li>Automated EPL data fetching</li>
+        <li>Built season-level aggregation tables</li>
+        <li>Engineered leakage-safe rolling features (last 5 matches)</li>
+        <li>Compared Linear Regression vs Random Forest</li>
+        <li>Analyzed prediction stability across matchweeks</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tech Stack</h2>
+      <p>Python, pandas, scikit-learn, matplotlib</p>
+    </section>
+
+    <section>
+      <a href="https://github.com/calmo4/prem_ml_2526" target="_blank">
+        View on GitHub
+      </a>
+    </section>
+
+  </main>
+</body>
+</html>
