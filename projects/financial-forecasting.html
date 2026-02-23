@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Budget Forecasting Model | William Calmo</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <main class="project-page">
+    <a class="back-link" href="../index.html">← Back to Home</a>
+
+    <header class="project-header">
+      <h1>Academic Budget Forecasting Model</h1>
+      <p class="project-subtitle">
+        Simulated budgeting, variance analysis, and year-end forecasting for a mid-size academic unit (~$3–4M).
+      </p>
+
+      <div class="project-links">
+        <a href="https://github.com/calmo4/finance-portfolio" target="_blank" rel="noopener noreferrer">
+          View GitHub Repo →
+        </a>
+      </div>
+    </header>
+
+    <section class="project-section">
+      <h2>Overview</h2>
+      <p>
+        This project simulates financial operations for a university unit across payroll, travel, equipment, and operations.
+        It generates realistic monthly spending behavior and produces budget vs actual reporting, burn-rate based forecasts,
+        and an executive-style narrative summary suitable for leadership.
+      </p>
+    </section>
+
+    <section class="project-section">
+      <h2>Key Output</h2>
+      <p>
+        Budget vs. forecast comparison across categories:
+      </p>
+      <img
+        src="../assets/budget_forecast.png"
+        alt="Budget vs Forecast by Category"
+        class="project-image"
+      />
+    </section>
+
+    <section class="project-section">
+      <h2>Methods</h2>
+      <ul class="project-list">
+        <li><strong>Payroll:</strong> Normal distribution (stable monthly spend)</li>
+        <li><strong>Travel:</strong> Lognormal distribution (right-skew; occasional spikes)</li>
+        <li><strong>Equipment:</strong> Gamma distribution (lumpy purchases)</li>
+        <li><strong>Operations:</strong> Normal distribution (moderately stable)</li>
+        <li><strong>Budgeting:</strong> Annual budgets derived from expected spend + category buffer</li>
+        <li><strong>Forecasting:</strong> Burn-rate projection from average monthly spend</li>
+      </ul>
+    </section>
+
+    <section class="project-section">
+      <h2>Tools</h2>
+      <p>Python, pandas, NumPy (data generation, analysis, forecasting, reporting)</p>
+    </section>
+  </main>
+</body>
+</html>
